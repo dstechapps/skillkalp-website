@@ -54,6 +54,12 @@ body {
   color: #ffca28;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 /* Hero Section */
 .hero {
   display: flex;
