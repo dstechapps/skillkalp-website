@@ -1,3 +1,4 @@
+
 :root {
   --primary-color: #512da8;
   --secondary-color: #311b92;
@@ -705,86 +706,65 @@ img {
   transform: scale(1.05);
 }
 
-/* Campus Ambassador Section */
 .ambassador-section {
-  background: linear-gradient(to right, #f3f4f6, #ffffff);
-  padding: 4rem 1rem;
+  padding: 60px 20px;
+  background: #f7f9fb;
   text-align: center;
 }
 
-.ambassador-section .container {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: #3f3d56; /* Your website heading color */
-  margin-bottom: 1rem;
-}
-
-.section-subtitle {
-  font-size: 1.1rem;
-  color: #444;
-  margin-bottom: 2.5rem;
+.ambassador-intro {
   max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+  color: #333;
 }
 
-.ambassador-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
-  margin-bottom: 2.5rem;
+.ambassador-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
 }
 
 .ambassador-card {
   background: #fff;
-  border-radius: 1rem;
-  padding: 1.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  max-width: 320px;
-  flex: 1 1 280px;
-  text-align: center;
-  border: 1px solid #e5e7eb;
-}
-
-.ambassador-card .emoji {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.06);
+  text-align: left;
 }
 
 .ambassador-card h3 {
-  color: #3f3d56; /* Website's text heading color */
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
+  color: #512da8;
+  margin-bottom: 10px;
 }
 
-.ambassador-card p {
-  font-size: 0.95rem;
-  color: #555;
+.ambassador-card ul {
+  list-style: disc inside;
+  padding-left: 0;
 }
 
-.apply-button-wrap {
-  text-align: center;
-}
-
-.apply-button {
-  background-color: #f97316; /* Your site’s highlight color (orange) */
+.ambassador-apply {
+  display: inline-block;
+  background: #311b92;
   color: #fff;
-  padding: 0.75rem 2rem;
-  border-radius: 9999px;
+  padding: 12px 24px;
+  border-radius: 8px;
   text-decoration: none;
-  font-weight: 600;
   transition: background 0.3s ease;
 }
 
-.apply-button:hover {
-  background-color: #ea580c; /* Slightly darker on hover */
+.ambassador-apply:hover {
+  background: #1565c0;
+}
+
+.nav-ambassador {
+  position: relative;
+  color: #ffa726;
+  font-weight: bold;
+  text-shadow: 0 0 5px #ffa726, 0 0 10px #ffb74d;
+  animation: pulseZoom 2s infinite, glow 1.5s infinite alternate;
+  overflow: hidden;
 }
 
 /* Zoom effect */
@@ -856,4 +836,3 @@ img {
   opacity: 1;
   bottom: 50px;
 }
-
