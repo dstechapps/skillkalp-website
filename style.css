@@ -98,10 +98,10 @@ body {
   }
 
   .menu-toggle {
-    display: block;
+    display: block !important;
     cursor: pointer;
     font-size: 24px;
-    color: #333;
+    color: #fff;
   }
 }
 
