@@ -447,7 +447,7 @@ img {
 /* About Section */
 .about-section {
   padding: 4rem 2rem;
-  background-color: #fff;
+  background-color: #f8f9fa;
 }
 
 .about-content {
@@ -707,6 +707,7 @@ img {
 }
 
 .ambassador-section {
+  background: white;
   padding: 4rem 1rem;
   text-align: center;
 }
