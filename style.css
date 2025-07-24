@@ -56,6 +56,7 @@ body {
   display: block;
 }
 
+/*Default Desktop*/
 .nav-links {
   list-style: none;
   display: flex;
@@ -72,6 +73,38 @@ body {
 .nav-links li a:hover {
   color: #ffca28;
 }
+
+/* Hide menu on small screens */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+  }
+}
+
+/* Hide hamburger by default */
+.menu-toggle {
+  display: none;
+}
+
 
 img {
   max-width: 100%;
