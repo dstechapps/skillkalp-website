@@ -725,6 +725,60 @@ img {
   background: #1565c0;
 }
 
+.nav-ambassador {
+  position: relative;
+  color: #ffa726;
+  font-weight: bold;
+  text-shadow: 0 0 5px #ffa726, 0 0 10px #ffb74d;
+  animation: pulseZoom 2s infinite, glow 1.5s infinite alternate;
+  overflow: hidden;
+}
+
+/* Zoom effect */
+@keyframes pulseZoom {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Glow effect */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #ffa726, 0 0 10px #ffb74d;
+  }
+  to {
+    text-shadow: 0 0 10px #ffb74d, 0 0 20px #ffc107;
+  }
+}
+
+/* Shine effect */
+.nav-ambassador::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.3), rgba(255,255,255,0));
+  transform: skewX(-25deg);
+}
+
+.nav-ambassador:hover::before {
+  animation: shine 1.2s ease forwards;
+}
+
+@keyframes shine {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
+}
+
 
 .toast {
   visibility: hidden;
