@@ -1,3 +1,8 @@
+document.getElementById("mobile-menu").addEventListener("click", function () {
+  document.querySelector(".nav-links").classList.toggle("active");
+});
+
+
 // Show/hide back to top button
 const btn = document.getElementById("backToTop");
 
