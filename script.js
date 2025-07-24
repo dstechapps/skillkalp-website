@@ -41,3 +41,31 @@ function showToast(message) {
   }, 5000);
 }
 
+
+  document.getElementById("contactForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch("https://formspree.io/f/your-id", {
+        method: "POST",
+        body: data,
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      if (response.ok) {
+        alert("Message sent successfully. Our Team will reach out to you!");
+        form.reset();
+      } else {
+        alert("There was an error. Please try again.");
+      }
+    } catch (err) {
+      alert("Network error. Please try again later.");
+    }
+  });
+
+
