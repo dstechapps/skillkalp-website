@@ -25,19 +25,17 @@
   <!-- Supabase client -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 
-   <script>
+  <script>
   const SUPABASE_URL = 'https://bnfykrqlfvzddueourfb.supabase.co';
   const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJuZnlrcnFsZnZ6ZGR1ZW91cmZiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTMzMzUzNjAsImV4cCI6MjA2ODkxMTM2MH0.76b-N7_gTW0dPuX3lTSMc3aLi5aG15d6rB9zW3G7WOs';
-  const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  const client = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
   async function init() {
-    const { data: { session }, error } = await supabase.auth.getSession();
+    const { data: { session }, error } = await client.auth.getSession();
 
     if (!session || error) {
-      // If no session, redirect to login
       window.location.href = 'login.html';
     } else {
-      // Show page & set welcome message
       document.body.style.display = 'block';
       document.getElementById('welcomeMsg').textContent = `Welcome, ${session.user.email}!`;
     }
@@ -46,10 +44,11 @@
   init();
 
   document.getElementById('logoutBtn').addEventListener('click', async () => {
-    await supabase.auth.signOut();
+    await client.auth.signOut();
     window.location.replace('login.html');
   });
 </script>
+
 
 
 
