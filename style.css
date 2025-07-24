@@ -40,14 +40,14 @@ body {
   color: white;
   font-weight: bold;
   font-size: 1.25rem;
-  background: white;
-  border-radius: 5px;
 }
 
 .logo img {
   height: 40px;  /* adjust this value if still too big */
   width: auto;
   display: block;
+  background: white;
+  border-radius: 5px;
 }
 
 .nav-links {
