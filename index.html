@@ -4,82 +4,97 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SkillKalp | Learning Made Easy</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css">
 </head>
-<body>
-  <!-- Header -->
-  <header class="navbar">
-    <a href="#" class="logo">SkillKalp</a>
-    <nav class="nav-links">
-      <a href="#">Home</a>
-      <a href="#about">About</a>
-      <a href="#courses">Courses</a>
-      <a href="#">New Batches</a>
-      <a href="#">Placements</a>
-      <a href="#">Store</a>
-      <a href="#contact">Contact</a>
-    </nav>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-purple-800 text-white p-4 flex justify-between items-center">
+    <div class="font-bold text-xl">SkillKalp</div>
+    <div class="space-x-4">
+      <a href="#" class="hover:underline">Home</a>
+      <a href="#about" class="hover:underline">About</a>
+      <a href="#courses" class="hover:underline">Courses</a>
+      <a href="#batches" class="hover:underline">New Batches</a>
+      <a href="#placements" class="hover:underline">Placements</a>
+      <a href="#store" class="hover:underline">Store</a>
+      <a href="#contact" class="hover:underline">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="text-center py-16 bg-gradient-to-br from-white to-purple-100">
+    <h1 class="text-4xl font-bold mb-2">Welcome to SkillKalp</h1>
+    <p class="text-lg">Learning Made Easy</p>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Welcome to SkillKalp</h1>
-      <p>Learning Made Easy</p>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="section">
-    <h2>About Us</h2>
+  <!-- About -->
+  <section id="about" class="px-6 py-10 bg-white">
+    <h2 class="text-2xl font-semibold mb-2">About Us</h2>
     <p>We offer industry-standard training in AI, ML, Salesforce, ServiceNow, and more.</p>
   </section>
 
-  <!-- ✅ Courses Section (Dynamic) -->
-  <section id="courses" class="section bg-light">
-    <h2>Our Courses</h2>
-    <div id="courseList" class="course-grid"></div>
+  <!-- Courses (Dynamic from Supabase) -->
+  <section id="courses" class="px-6 py-10 bg-gray-50">
+    <h2 class="text-2xl font-semibold mb-4">Our Courses</h2>
+    <div id="coursesList" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- Supabase courses will appear here -->
+    </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <h2>Contact Us</h2>
+  <!-- New Batches -->
+  <section id="batches" class="px-6 py-10 bg-white">
+    <h2 class="text-2xl font-semibold mb-2">New Batches</h2>
+    <p>Coming soon! Stay tuned for our latest batch schedules.</p>
+  </section>
+
+  <!-- Placements -->
+  <section id="placements" class="px-6 py-10 bg-gray-50">
+    <h2 class="text-2xl font-semibold mb-2">Placements</h2>
+    <p>Our students have been placed in top companies. Placement cards coming soon.</p>
+  </section>
+
+  <!-- Store -->
+  <section id="store" class="px-6 py-10 bg-white">
+    <h2 class="text-2xl font-semibold mb-2">Store</h2>
+    <p>Courses and learning kits will be available in our upcoming store.</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="px-6 py-10 bg-gray-50">
+    <h2 class="text-2xl font-semibold mb-2">Contact Us</h2>
     <p>Email: info@skillkalp.com | Phone: +91-XXXXXXXXXX</p>
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2025 SkillKalp. All rights reserved.</p>
+  <footer class="bg-purple-800 text-white text-center p-4">
+    © 2025 SkillKalp. All rights reserved.
   </footer>
 
-  <!-- Supabase SDK + Course Script -->
+  <!-- Supabase SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
   <script>
     const SUPABASE_URL = 'https://bnfykrqlfvzddueourfb.supabase.co';
-    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJuZnlrcnFsZnZ6ZGR1ZW91cmZiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTMzMzUzNjAsImV4cCI6MjA2ODkxMTM2MH0.76b-N7_gTW0dPuX3lTSMc3aLi5aG15d6rB9zW3G7WOs'; // Replace with actual anon key
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJuZnlrcnFsZnZ6ZGR1ZW91cmZiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTMzMzUzNjAsImV4cCI6MjA2ODkxMTM2MH0.76b-N7_gTW0dPuX3lTSMc3aLi5aG15d6rB9zW3G7WOs'; // Replace this securely
     const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
     async function loadCourses() {
-      const { data, error } = await supabase
-        .from('courses')
-        .select('*')
-        .eq('status', 'active')
-        .order('created_at', { ascending: false });
+      const { data, error } = await supabase.from('courses').select('*');
+      const container = document.getElementById('coursesList');
 
       if (error) {
-        console.error('Error fetching courses:', error.message);
+        container.innerHTML = '<p class="text-red-500">Failed to load courses.</p>';
         return;
       }
 
-      const container = document.getElementById('courseList');
       data.forEach(course => {
         const div = document.createElement('div');
-        div.className = 'course-card';
+        div.className = 'bg-white p-4 rounded shadow';
         div.innerHTML = `
-          <h3>${course.name}</h3>
-          <p>${course.description}</p>
-          <p><strong>Mode:</strong> ${course.mode}</p>
-          <p><strong>Duration:</strong> ${course.duration}</p>
+          <h3 class="text-xl font-semibold">${course.name}</h3>
+          <p class="text-sm text-gray-600">${course.description || ''}</p>
+          <p class="text-sm text-gray-500 mt-1">Mode: ${course.mode || 'N/A'}</p>
+          <p class="text-sm text-gray-500">Duration: ${course.duration || 'N/A'}</p>
         `;
         container.appendChild(div);
       });
