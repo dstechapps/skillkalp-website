@@ -74,6 +74,11 @@ body {
   color: #ffca28;
 }
 
+/* Hide hamburger by default */
+.menu-toggle {
+  display: none;
+}
+
 /* Hide menu on small screens */
 @media (max-width: 768px) {
   .nav-links {
@@ -99,12 +104,6 @@ body {
     color: #333;
   }
 }
-
-/* Hide hamburger by default */
-.menu-toggle {
-  display: none;
-}
-
 
 img {
   max-width: 100%;
