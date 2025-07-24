@@ -84,7 +84,7 @@ body {
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: #fff;
+    background-color: #512da8;
     position: absolute;
     top: 70px;
     right: 0;
