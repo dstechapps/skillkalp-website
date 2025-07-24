@@ -6,7 +6,8 @@
   <title>Admin Dashboard | SkillKalp</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css">
 </head>
-<body class="bg-gray-100 min-h-screen">
+<body class="bg-gray-100 min-h-screen" style="display: none;">
+
   <!-- Header -->
   <header class="bg-white shadow p-4 flex justify-between items-center">
     <h1 class="text-xl font-bold text-gray-800">SkillKalp Admin Dashboard</h1>
@@ -29,22 +30,16 @@
   const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJuZnlrcnFsZnZ6ZGR1ZW91cmZiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTMzMzUzNjAsImV4cCI6MjA2ODkxMTM2MH0.76b-N7_gTW0dPuX3lTSMc3aLi5aG15d6rB9zW3G7WOs';
   const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-  document.body.style.display = 'none'; // Hide initially
-
   async function init() {
-    const {
-      data: { session },
-      error
-    } = await supabase.auth.getSession();
+    const { data: { session }, error } = await supabase.auth.getSession();
 
     if (!session || error) {
-      // No active session
+      // If no session, redirect to login
       window.location.href = 'login.html';
     } else {
-      // Session exists
+      // Show page & set welcome message
       document.body.style.display = 'block';
-      const email = session.user.email;
-      document.getElementById("welcomeMsg").textContent = `Welcome, ${email}`;
+      document.getElementById('welcomeMsg').textContent = `Welcome, ${session.user.email}!`;
     }
   }
 
@@ -52,10 +47,10 @@
 
   document.getElementById('logoutBtn').addEventListener('click', async () => {
     await supabase.auth.signOut();
-    // Force session to clear before redirect
     window.location.replace('login.html');
   });
 </script>
+
 
 
 </body>
