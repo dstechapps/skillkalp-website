@@ -19,24 +19,26 @@
 
   <!-- Supabase SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-  <script>
-    const SUPABASE_URL = 'https://bnfykrqlfvzddueourfb.supabase.co';
-    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJuZnlrcnFsZnZ6ZGR1ZW91cmZiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTMzMzUzNjAsImV4cCI6MjA2ODkxMTM2MH0.76b-N7_gTW0dPuX3lTSMc3aLi5aG15d6rB9zW3G7WOs';
-    const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+ <script>
+  const SUPABASE_URL = 'https://bnfykrqlfvzddueourfb.supabase.co';
+  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJuZnlrcnFsZnZ6ZGR1ZW91cmZiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTMzMzUzNjAsImV4cCI6MjA2ODkxMTM2MH0.76b-N7_gTW0dPuX3lTSMc3aLi5aG15d6rB9zW3G7WOs'; 
 
-    document.getElementById('loginBtn').addEventListener('click', async () => {
-      const email = document.getElementById('email').value.trim();
-      const password = document.getElementById('password').value.trim();
+  const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-      const { error } = await supabase.auth.signInWithPassword({ email, password });
+  document.getElementById('loginBtn').addEventListener('click', async () => {
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value.trim();
 
-      if (error) {
-        document.getElementById('error').textContent = error.message;
-        document.getElementById('error').classList.remove('hidden');
-      } else {
-        window.location.href = 'dashboard.html';
-      }
-    });
-  </script>
+    const { error } = await supabaseClient.auth.signInWithPassword({ email, password });
+
+    if (error) {
+      document.getElementById('error').textContent = error.message;
+      document.getElementById('error').classList.remove('hidden');
+    } else {
+      window.location.href = 'dashboard.html';
+    }
+  });
+</script>
+
 </body>
 </html>
