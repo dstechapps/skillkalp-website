@@ -1,106 +1,311 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SkillKalp | Learning Made Easy</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
-<body class="bg-gray-100 text-gray-800">
+
+<body>
 
   <!-- Navbar -->
-  <nav class="bg-purple-800 text-white p-4 flex justify-between items-center">
-    <div class="font-bold text-xl">SkillKalp</div>
-    <div class="space-x-4">
-      <a href="#" class="hover:underline">Home</a>
-      <a href="#about" class="hover:underline">About</a>
-      <a href="#courses" class="hover:underline">Courses</a>
-      <a href="#batches" class="hover:underline">New Batches</a>
-      <a href="#placements" class="hover:underline">Placements</a>
-      <a href="#store" class="hover:underline">Store</a>
-      <a href="#contact" class="hover:underline">Contact</a>
-    </div>
-  </nav>
-
-  <!-- Hero -->
-  <header class="text-center py-16 bg-gradient-to-br from-white to-purple-100">
-    <h1 class="text-4xl font-bold mb-2">Welcome to SkillKalp</h1>
-    <p class="text-lg">Learning Made Easy</p>
+  <header class="navbar">
+    <a href="#" class="logo">
+      <img src="https://i.postimg.cc/dt5vmfs8/Skill-Kalp-Logo.png" alt="SkillKalp Logo" />
+       <span>SkillKalp</span>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">New Batches</a></li>
+        <li><a href="#">Placements</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- About -->
-  <section id="about" class="px-6 py-10 bg-white">
-    <h2 class="text-2xl font-semibold mb-2">About Us</h2>
-    <p>We offer industry-standard training in AI, ML, Salesforce, ServiceNow, and more.</p>
-  </section>
-
-  <!-- Courses (Dynamic from Supabase) -->
-  <section id="courses" class="px-6 py-10 bg-gray-50">
-    <h2 class="text-2xl font-semibold mb-4">Our Courses</h2>
-    <div id="coursesList" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <!-- Supabase courses will appear here -->
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content"> 
+      <h1>Get Job-Ready with <span>Real-World Platform Training</span></h1>
+      <ul>
+        <li><i class="fas fa-check-circle"></i> AI & ML Powered Learning</li>
+        <li><i class="fas fa-check-circle"></i> Industry-Oriented Curriculum</li>
+        <li><i class="fas fa-check-circle"></i> Hands-on Real Projects</li>
+      </ul>
+      <a href="#" class="cta-btn">Get Started</a>
+    </div>
+    <div class="hero-image">
+      <img src="https://i.postimg.cc/rygBMfjY/undraw-developer-activity-4zqd.png" alt="Learning Illustration" />
     </div>
   </section>
 
-  <!-- New Batches -->
-  <section id="batches" class="px-6 py-10 bg-white">
-    <h2 class="text-2xl font-semibold mb-2">New Batches</h2>
-    <p>Coming soon! Stay tuned for our latest batch schedules.</p>
+  <!-- Courses Section -->
+  <section class="courses-section" data-aos="fade-up">
+    <h2>Our Courses</h2>
+    <div class="courses-grid">
+
+      <div class="course-card" data-aos="zoom-in">
+        <i class="fas fa-server"></i>
+        <p>ServiceNow</p>
+      </div>
+
+      <div class="course-card" data-aos="zoom-in">
+        <i class="fab fa-salesforce"></i>
+        <p>Salesforce</p>
+      </div>
+
+      <div class="course-card" data-aos="zoom-in">
+        <i class="fas fa-robot"></i>
+        <p>Artificial Intelligence</p>
+      </div>
+
+      <div class="course-card" data-aos="zoom-in">
+        <i class="fas fa-brain"></i>
+        <p>Machine Learning</p>
+      </div>
+
+      <div class="course-card" data-aos="zoom-in">
+        <i class="fas fa-chart-line"></i>
+        <p>Data Science</p>
+      </div>
+
+      <div class="course-card" data-aos="zoom-in">
+        <i class="fas fa-cogs"></i>
+        <p>DevOps</p>
+      </div>
+
+      <div class="course-card" data-aos="zoom-in">
+        <i class="fas fa-briefcase"></i>
+        <p>Workday</p>
+      </div>
+
+      <div class="course-card" data-aos="zoom-in">
+        <i class="fab fa-python"></i>
+        <p>Python</p>
+      </div>
+
+      <div class="course-card" data-aos="zoom-in">
+        <i class="fab fa-java"></i>
+        <p>Java</p>
+      </div>
+
+    </div>
   </section>
 
-  <!-- Placements -->
-  <section id="placements" class="px-6 py-10 bg-gray-50">
-    <h2 class="text-2xl font-semibold mb-2">Placements</h2>
-    <p>Our students have been placed in top companies. Placement cards coming soon.</p>
+  <!-- New Batches Section -->
+  <section class="batches-section">
+    <h2>New Batches</h2>
+    <div class="table-container">
+      <table class="batches-table">
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Start Date</th>
+            <th>Timings</th>
+            <th>Duration</th>
+            <th>Trainer</th>
+            <th>Register</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Full Stack Development</td>
+            <td>25 Jul 2025</td>
+            <td>07:00 PM – 09:00 PM</td>
+            <td>3 Months</td>
+            <td>Mr. Rajeev</td>
+            <td><a href="#" class="batch-btn">Register</a></td>
+          </tr>
+          <tr>
+            <td>Data Science</td>
+            <td>26 Jul 2025</td>
+            <td>06:00 PM – 08:00 PM</td>
+            <td>2.5 Months</td>
+            <td>Ms. Priya</td>
+            <td><a href="#" class="batch-btn">Register</a></td>
+          </tr>
+          <tr>
+            <td>DevOps</td>
+            <td>27 Jul 2025</td>
+            <td>08:00 AM – 09:30 AM</td>
+            <td>2 Months</td>
+            <td>Mr. Kumar</td>
+            <td><a href="#" class="batch-btn">Register</a></td>
+          </tr>
+          <tr>
+            <td>Workday</td>
+            <td>28 Jul 2025</td>
+            <td>06:30 PM – 08:00 PM</td>
+            <td>1.5 Months</td>
+            <td>Ms. Anitha</td>
+            <td><a href="#" class="batch-btn">Register</a></td>
+          </tr>
+          <tr>
+            <td>Salesforce</td>
+            <td>29 Jul 2025</td>
+            <td>07:30 PM – 09:00 PM</td>
+            <td>2 Months</td>
+            <td>Mr. Arvind</td>
+            <td><a href="#" class="batch-btn">Register</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </section>
 
-  <!-- Store -->
-  <section id="store" class="px-6 py-10 bg-white">
-    <h2 class="text-2xl font-semibold mb-2">Store</h2>
-    <p>Courses and learning kits will be available in our upcoming store.</p>
+  <!-- Training Modes Section -->
+  <section class="training-section">
+    <h2>Training Modes</h2>
+    <div class="training-cards">
+
+      <div class="training-card">
+        <i class="fas fa-chalkboard-teacher"></i>
+        <h3>In-Person</h3>
+        <p>Attend expert-led classroom sessions at our training centers for hands-on learning and peer interaction.</p>
+      </div>
+
+      <div class="training-card">
+        <i class="fas fa-laptop-code"></i>
+        <h3>Online</h3>
+        <p>Flexible online training from anywhere with live instructor interaction and full access to resources.</p>
+      </div>
+
+      <div class="training-card">
+        <i class="fas fa-building"></i>
+        <h3>Corporate</h3>
+        <p>Customized training solutions tailored for teams at your company’s location or virtually.</p>
+      </div>
+
+    </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="px-6 py-10 bg-gray-50">
-    <h2 class="text-2xl font-semibold mb-2">Contact Us</h2>
-    <p>Email: info@skillkalp.com | Phone: +91-XXXXXXXXXX</p>
+  <!-- Placements Section -->
+  <section class="placements-section">
+    <h2>Recent Placements</h2>
+    <div class="placement-cards">
+
+      <div class="placement-card">
+        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Student" class="student-img">
+        <h3>Rahul Mehta</h3>
+        <p>Full Stack Developer</p>
+        <img src="https://logo.clearbit.com/infosys.com" alt="Company" class="company-logo">
+        <span class="badge hired">Hired by Infosys</span>
+      </div>
+
+      <div class="placement-card">
+        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Student" class="student-img">
+        <h3>Anjali Sharma</h3>
+        <p>Data Scientist</p>
+        <img src="https://logo.clearbit.com/accenture.com" alt="Company" class="company-logo">
+        <span class="badge hired">Hired by Accenture</span>
+      </div>
+
+      <div class="placement-card">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Student" class="student-img">
+        <h3>Vikram Rao</h3>
+        <p>DevOps Engineer</p>
+        <img src="https://logo.clearbit.com/tcs.com" alt="Company" class="company-logo">
+        <span class="badge hired">Hired by TCS</span>
+      </div>
+
+      <div class="placement-card">
+        <img src="https://randomuser.me/api/portraits/women/30.jpg" alt="Student" class="student-img">
+        <h3>Neha Verma</h3>
+        <p>Salesforce Developer</p>
+        <img src="https://logo.clearbit.com/cognizant.com" alt="Company" class="company-logo">
+        <span class="badge hired">Hired by Cognizant</span>
+      </div>
+
+    </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-purple-800 text-white text-center p-4">
-    © 2025 SkillKalp. All rights reserved.
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="about-content">
+      <div class="about-text">
+        <h2>About SkillKalp</h2>
+        <p>At SkillKalp, we believe that learning should be accessible, practical, and career-focused. Our mission is to empower students and professionals with the skills that matter in today’s fast-paced tech world.</p>
+        <ul>
+          <li><i class="fas fa-check-circle"></i> Industry-aligned curriculum</li>
+          <li><i class="fas fa-check-circle"></i> Expert trainers with real-world experience</li>
+          <li><i class="fas fa-check-circle"></i> Hands-on projects and certification</li>
+          <li><i class="fas fa-check-circle"></i> Placement-oriented programs</li>
+        </ul>
+      </div>
+      <div class="about-image">
+        <img src="https://undraw.co/api/illustrations/28c211d5-d259-4f9c-b729-6fd7c1f77920" alt="About SkillKalp">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <h2>Contact Us</h2>
+    <div class="contact-wrapper">
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <p><i class="fas fa-phone-alt"></i> +91 98765 43210</p>
+        <p><i class="fas fa-envelope"></i> info@skillkalp.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Hyderabad, Telangana, India</p>
+      </div>
+
+      <!-- Contact Form -->
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>SkillKalp</h3>
+        <p>Learning Made Easy</p>
+      </div>
+      <div class="footer-links">
+        <a href="#">Home</a>
+        <a href="#">Courses</a>
+        <a href="#">Placements</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 SkillKalp. All rights reserved.</p>
+    </div>
   </footer>
 
-  <!-- Supabase SDK -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    const SUPABASE_URL = 'https://bnfykrqlfvzddueourfb.supabase.co';
-    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJuZnlrcnFsZnZ6ZGR1ZW91cmZiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTMzMzUzNjAsImV4cCI6MjA2ODkxMTM2MH0.76b-N7_gTW0dPuX3lTSMc3aLi5aG15d6rB9zW3G7WOs'; // Replace this securely
-    const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-
-    async function loadCourses() {
-      const { data, error } = await supabase.from('courses').select('*');
-      const container = document.getElementById('coursesList');
-
-      if (error) {
-        container.innerHTML = '<p class="text-red-500">Failed to load courses.</p>';
-        return;
-      }
-
-      data.forEach(course => {
-        const div = document.createElement('div');
-        div.className = 'bg-white p-4 rounded shadow';
-        div.innerHTML = `
-          <h3 class="text-xl font-semibold">${course.name}</h3>
-          <p class="text-sm text-gray-600">${course.description || ''}</p>
-          <p class="text-sm text-gray-500 mt-1">Mode: ${course.mode || 'N/A'}</p>
-          <p class="text-sm text-gray-500">Duration: ${course.duration || 'N/A'}</p>
-        `;
-        container.appendChild(div);
-      });
-    }
-
-    loadCourses();
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
   </script>
+  
+<script src="script.js"></script>
+  
 </body>
+
 </html>
