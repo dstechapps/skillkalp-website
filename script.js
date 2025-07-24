@@ -21,6 +21,12 @@ document.querySelectorAll(".batch-btn").forEach((registerbtn) => {
   registerbtn.addEventListener("click", function (e) {
     e.preventDefault(); // prevent navigation if it's a link
     showToast("Please send an email to the mail mentioned in contact section. Thank you!");
+    
+    const contactSection = document.querySelector(".contact-section");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+    
   });
 });
 
