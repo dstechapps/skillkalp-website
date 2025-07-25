@@ -1,15 +1,22 @@
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9fafb;
+  color: #111827;
   margin: 0;
   padding: 0;
-  background-color: #f9fafb;
-  color: #111827;
 }
 
-section {
-  padding: 60px 20px;
+.section-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 3rem 1rem 2rem;
+  font-weight: 500;
 }
 
+.section-title .highlight {
+  font-weight: 700;
+  color: #111;
+}
 .container {
   max-width: 1000px;
   margin: 0 auto;
@@ -32,75 +39,88 @@ section {
   color: #374151;
 }
 
-.ambassador-benefits {
-  padding: 60px 20px;
-  background-color: #f9fafb;
+.ambassador-benefits-section {
+  padding: 2rem 1rem;
 }
 
-.ambassador-benefits .container {
+.benefits-grid {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .benefit-card {
-  flex: 1 1 280px;
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  background: #fff;
+  padding: 1rem;
   text-align: center;
-  max-width: 300px;
-  transition: transform 0.3s ease;
+  border-radius: 12px;
+  width: 200px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
 }
 
 .benefit-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
 }
 
-.benefit-card .icon {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+.benefit-card img {
+  width: 64px;
+  margin-bottom: 0.5rem;
 }
 
-.benefit-card h3 {
-  margin: 10px 0;
-  color: #4F46E5; /* SkillKalp primary color */
-  font-size: 1.2rem;
+.benefit-card p {
+  font-size: 0.85rem;
   font-weight: 600;
-}
-
-.ambassador-details {
-  padding: 40px 20px 60px;
-  background-color: #ffffff; /* contrast with the cards section */
-  margin-top: -30px; /* pull it closer to the section above */
-}
-
-.ambassador-details .container {
-  max-width: 960px;
-  margin: 0 auto;
-  background: #f9fafb;
-  border-radius: 12px;
-  padding: 40px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
-}
-
-.ambassador-details h2 {
-  font-size: 1.5rem;
-  margin-bottom: 16px;
   color: #1f2937;
 }
 
-.ambassador-details ul {
-  padding-left: 1.5rem;
-  margin-bottom: 32px;
+.ambassador-role-section {
+  padding: 2rem 1rem 4rem;
 }
 
-.ambassador-details li {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #374151;
+.role-container {
+  display: flex;
+  max-width: 1000px;
+  margin: 2rem auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  flex-wrap: wrap;
+}
+
+.role-column {
+  flex: 1 1 300px;
+  padding: 2rem;
+  min-width: 300px;
+}
+
+.role-left {
+  background-color: #1e3a8a;
+  color: #fff;
+}
+
+.role-right {
+  background-color: #facc15;
+  color: #000;
+}
+
+.role-column h3 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.role-column ul {
+  padding-left: 1rem;
+  list-style: disc;
+}
+
+.role-column li {
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
 }
 
 .ambassador-form h2 {
