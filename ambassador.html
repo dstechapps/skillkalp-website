@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Ambassador Program | SkillKalp</title>
+  <link rel="stylesheet" href="ambassador.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Become a SkillKalp Campus Ambassador</h1>
+      <p>Empower your peers. Build your brand. Lead with SkillKalp.</p>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits">
+    <div class="container cards">
+      <div class="card">
+        <h3>🎓 Represent</h3>
+        <p>Be the face of SkillKalp in your college and raise awareness about our programs.</p>
+      </div>
+      <div class="card">
+        <h3>📣 Promote</h3>
+        <p>Help promote trainings, workshops, and events digitally and offline.</p>
+      </div>
+      <div class="card">
+        <h3>🎁 Perks</h3>
+        <p>Get certificates, exclusive goodies, mentorship, and training discounts.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Responsibilities -->
+  <section class="info">
+    <div class="container">
+      <h2>Responsibilities</h2>
+      <ul>
+        <li>Coordinate and promote SkillKalp events at your campus</li>
+        <li>Build community and engage students online</li>
+        <li>Share feedback to help improve our offerings</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Eligibility -->
+  <section class="info">
+    <div class="container">
+      <h2>Eligibility</h2>
+      <ul>
+        <li>Must be a currently enrolled student in an engineering college</li>
+        <li>Strong communication skills and leadership mindset</li>
+        <li>Minimum 3-month commitment</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Application Form -->
+  <section class="form-section">
+    <div class="container">
+      <h2>Apply Now</h2>
+      <form id="ambassadorForm">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="text" name="college" placeholder="College Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <input type="url" name="linkedin" placeholder="LinkedIn Profile (Optional)" />
+        <textarea name="why" placeholder="Why do you want to become an ambassador?" required></textarea>
+        <button type="submit">Submit</button>
+        <p id="form-message"></p>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById("ambassadorForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      document.getElementById("form-message").textContent = "Thank you for applying! We'll be in touch soon.";
+      document.getElementById("ambassadorForm").reset();
+    });
+  </script>
+</body>
+
+</html>
