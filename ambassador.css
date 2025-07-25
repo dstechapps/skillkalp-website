@@ -1,172 +1,150 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #f9fafb;
-  color: #111827;
-  margin: 0;
-  padding: 0;
-}
+    * {
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-.section-title {
-  text-align: center;
-  font-size: 1.8rem;
-  margin: 3rem 1rem 2rem;
-  font-weight: 500;
-}
+    body {
+      background-color: #f9fafb;
+      color: #1f2937;
+      line-height: 1.6;
+      padding: 0 1rem;
+    }
 
-.section-title .highlight {
-  font-weight: 700;
-  color: #111;
-}
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    .ambassador-section {
+      padding: 60px 0;
+      background: linear-gradient(to right, #e0f2fe, #ffffff);
+      text-align: center;
+    }
 
-.ambassador-hero {
-  text-align: center;
-  background: linear-gradient(to right, #eef2ff, #fff);
-}
+    .ambassador-section h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #1e3a8a;
+    }
 
-.ambassador-hero h1 {
-  font-size: 2.5rem;
-  color: #4F46E5; /* your primary theme color */
-  margin-bottom: 10px;
-}
+    .ambassador-section p {
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      font-size: 1rem;
+      color: #374151;
+    }
 
-.ambassador-hero p {
-  font-size: 1.2rem;
-  color: #374151;
-}
+    .ambassador-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
 
-.ambassador-benefits-section {
-  padding: 2rem 1rem;
-}
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      padding: 1.5rem;
+      max-width: 280px;
+      flex: 1 1 260px;
+      transition: transform 0.3s;
+    }
 
-.benefits-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
+    .card:hover {
+      transform: translateY(-5px);
+    }
 
-.benefit-card {
-  background: #fff;
-  padding: 1rem;
-  text-align: center;
-  border-radius: 12px;
-  width: 200px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease;
-}
+    .card h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #3b82f6;
+      margin-top: 0.75rem;
+    }
 
-.benefit-card:hover {
-  transform: translateY(-4px);
-}
+    .card p {
+      font-size: 0.95rem;
+      color: #4b5563;
+    }
 
-.benefit-card img {
-  width: 64px;
-  margin-bottom: 0.5rem;
-}
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-align: left;
+      color: #1e40af;
+    }
 
-.benefit-card p {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #1f2937;
-}
+    .text-section {
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      text-align: left;
+    }
 
-.ambassador-role-section {
-  padding: 2rem 1rem 4rem;
-}
+    .text-section ul {
+      padding-left: 1.2rem;
+    }
 
-.role-container {
-  display: flex;
-  max-width: 1000px;
-  margin: 2rem auto;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  flex-wrap: wrap;
-}
+    .text-section li {
+      margin-bottom: 0.5rem;
+    }
 
-.role-column {
-  flex: 1 1 300px;
-  padding: 2rem;
-  min-width: 300px;
-}
+    .apply-form {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
 
-.role-left {
-  background-color: #1e3a8a;
-  color: #fff;
-}
+    .apply-form h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #1e40af;
+      margin-bottom: 1rem;
+    }
 
-.role-right {
-  background-color: #facc15;
-  color: #000;
-}
+    .form-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
 
-.role-column h3 {
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
-  font-weight: 700;
-}
+    .form-group input,
+    .form-group textarea {
+      flex: 1 1 250px;
+      padding: 0.75rem;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      font-size: 0.95rem;
+    }
 
-.role-column ul {
-  padding-left: 1rem;
-  list-style: disc;
-}
+    .form-group textarea {
+      resize: vertical;
+    }
 
-.role-column li {
-  margin-bottom: 0.8rem;
-  font-size: 0.95rem;
-}
+    .submit-btn {
+      background-color: #2563eb;
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
 
-.ambassador-form h2 {
-  text-align: center;
-  margin-bottom: 30px;
-}
+    .submit-btn:hover {
+      background-color: #1d4ed8;
+    }
 
-.ambassador-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 600px;
-  margin: 0 auto;
-}
+    @media (max-width: 640px) {
+      .card {
+        max-width: 100%;
+      }
 
-.ambassador-form input,
-.ambassador-form textarea {
-  padding: 12px;
-  border-radius: 6px;
-  border: 1px solid #d1d5db;
-  font-size: 1rem;
-  width: 100%;
-}
-
-.ambassador-form textarea {
-  min-height: 100px;
-}
-
-.ambassador-form button {
-  background-color: #4F46E5;
-  color: white;
-  padding: 14px;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.ambassador-form button:hover {
-  background-color: #4338ca;
-}
-
-@media (max-width: 768px) {
-  .ambassador-benefits {
-    flex-direction: column;
-    align-items: center;
-  }
-}
+      .form-group {
+        flex-direction: column;
+      }
+    }
