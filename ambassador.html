@@ -3,94 +3,223 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Campus Ambassador | SkillKalp</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="ambassador.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>SkillKalp Campus Ambassador Program</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #f9fafb;
+      color: #1f2937;
+      line-height: 1.6;
+      padding: 0 1rem;
+    }
+
+    .ambassador-section {
+      padding: 60px 0;
+      background: linear-gradient(to right, #e0f2fe, #ffffff);
+      text-align: center;
+    }
+
+    .ambassador-section h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #1e3a8a;
+    }
+
+    .ambassador-section p {
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      font-size: 1rem;
+      color: #374151;
+    }
+
+    .ambassador-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      padding: 1.5rem;
+      max-width: 280px;
+      flex: 1 1 260px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #3b82f6;
+      margin-top: 0.75rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #4b5563;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-align: left;
+      color: #1e40af;
+    }
+
+    .text-section {
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      text-align: left;
+    }
+
+    .text-section ul {
+      padding-left: 1.2rem;
+    }
+
+    .text-section li {
+      margin-bottom: 0.5rem;
+    }
+
+    .apply-form {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .apply-form h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #1e40af;
+      margin-bottom: 1rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      flex: 1 1 250px;
+      padding: 0.75rem;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      font-size: 0.95rem;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+    }
+
+    .submit-btn {
+      background-color: #2563eb;
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .submit-btn:hover {
+      background-color: #1d4ed8;
+    }
+
+    @media (max-width: 640px) {
+      .card {
+        max-width: 100%;
+      }
+
+      .form-group {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <section class="ambassador-hero">
-    <div class="container">
-      <h1>SkillKalp Campus Ambassador Program</h1>
-      <p>Empower peers. Build your brand. Lead with SkillKalp.</p>
+  <section class="ambassador-section">
+    <h1>Campus Ambassador Program</h1>
+    <p>Are you a student passionate about technology and growth? Join the <strong>SkillKalp Campus Ambassador Program</strong> and become our representative at your college!</p>
+
+    <div class="ambassador-cards">
+      <div class="card">
+        <div>🎓</div>
+        <h3>Represent</h3>
+        <p>Be the face of SkillKalp and spread awareness about our training programs.</p>
+      </div>
+      <div class="card">
+        <div>📣</div>
+        <h3>Promote</h3>
+        <p>Help promote events, workshops, and batches on campus through digital and offline means.</p>
+      </div>
+      <div class="card">
+        <div>🎁</div>
+        <h3>Perks</h3>
+        <p>Get certificates, exclusive goodies, discounts, and ambassador privileges.</p>
+      </div>
     </div>
   </section>
 
-<section class="ambassador-benefits-section">
-  <h2 class="section-title">
-    <span class="highlight">THE BENEFITS</span> OF BECOMING AN AMBASSADOR
-  </h2>
-  <div class="benefits-grid">
-    <div class="benefit-card">
-      <img src="https://img.icons8.com/emoji/96/certificate-emoji.png" alt="Certificate" />
-      <p>CERTIFICATE OF EXCELLENCE / LETTER OF RECOMMENDATION</p>
-    </div>
-    <div class="benefit-card">
-      <img src="https://img.icons8.com/emoji/96/envelope-emoji.png" alt="Appreciation Letter" />
-      <p>APPRECIATION LETTER FROM CEO</p>
-    </div>
-    <div class="benefit-card">
-      <img src="https://img.icons8.com/emoji/96/handshake-emoji.png" alt="Event Experience" />
-      <p>HANDS-ON EXPERIENCE IN EVENT MANAGEMENT</p>
-    </div>
-    <div class="benefit-card">
-      <img src="https://img.icons8.com/emoji/96/ticket-emoji.png" alt="Event Passes" />
-      <p>CHANCE TO GET PASSES FOR BIG EVENTS</p>
-    </div>
-    <div class="benefit-card">
-      <img src="https://img.icons8.com/emoji/96/money-with-wings.png" alt="Cash Prizes" />
-      <p>OPPORTUNITY TO WIN CASH PRIZES</p>
-    </div>
+  <div class="text-section">
+    <h2 class="section-title">Responsibilities</h2>
+    <ul>
+      <li>Coordinate and promote SkillKalp events at your campus</li>
+      <li>Build community and engage students online</li>
+      <li>Share feedback to help improve our offerings</li>
+    </ul>
   </div>
-</section>
 
-<section class="ambassador-role-section">
-  <h2 class="section-title">
-    <span class="highlight">ROLE & RESPONSIBILITIES</span> OF AMBASSADORS
-  </h2>
-  <div class="role-container">
-    <div class="role-column role-left">
-      <h3>Role</h3>
-      <ul>
-        <li>Ensure registrations of peers</li>
-        <li>Information dissemination</li>
-        <li>Act as a point of contact for SkillKalp</li>
-        <li>Organize micro-events in sync with SkillKalp</li>
-        <li>Create student WhatsApp groups</li>
-        <li>Promote SkillKalp on social media</li>
-      </ul>
-    </div>
-    <div class="role-column role-right">
-      <h3>Responsibilities</h3>
-      <ul>
-        <li>Event planning & campus promotions</li>
-        <li>Connecting with student clubs/groups</li>
-        <li>Driving SkillKalp initiatives</li>
-        <li>Fostering campus relationships</li>
-        <li>Reporting activities to SkillKalp team</li>
-        <li>Managing campus WhatsApp/social groups</li>
-      </ul>
-    </div>
+  <div class="text-section">
+    <h2 class="section-title">Eligibility</h2>
+    <ul>
+      <li>Must be a currently enrolled student in an engineering college</li>
+      <li>Strong communication skills and leadership mindset</li>
+      <li>Minimum 3-month commitment</li>
+    </ul>
   </div>
-</section>
 
-  <section class="ambassador-form">
-    <div class="container">
-      <h2>Apply Now</h2>
-      <form>
-        <input type="text" placeholder="Full Name" required />
-        <input type="text" placeholder="College Name" required />
-        <input type="email" placeholder="Email Address" required />
-        <input type="tel" placeholder="Phone Number" required />
-        <input type="url" placeholder="LinkedIn Profile (Optional)" />
-        <textarea placeholder="Why do you want to become an ambassador?" required></textarea>
-        <button type="submit">Submit Application</button>
-      </form>
-    </div>
-  </section>
+  <div class="apply-form">
+    <h2>Apply Now</h2>
+    <form>
+      <div class="form-group">
+        <input type="text" placeholder="Full Name" required>
+        <input type="text" placeholder="College Name" required>
+      </div>
+      <div class="form-group">
+        <input type="email" placeholder="Email Address" required>
+        <input type="tel" placeholder="Phone Number" required>
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder="LinkedIn Profile (optional)">
+        <textarea rows="3" placeholder="Why do you want to become an ambassador?" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Submit Application</button>
+    </form>
+  </div>
 
 </body>
 </html>
