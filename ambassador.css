@@ -33,28 +33,42 @@ section {
 }
 
 .ambassador-benefits {
+  padding: 60px 20px;
+  background-color: #f9fafb;
+}
+
+.ambassador-benefits .container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .benefit-card {
-  flex: 1 1 250px;
+  flex: 1 1 280px;
   background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   text-align: center;
+  max-width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
 }
 
 .benefit-card .icon {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
 .benefit-card h3 {
-  margin-top: 10px;
-  color: #4F46E5;
+  margin: 10px 0;
+  color: #4F46E5; /* SkillKalp primary color */
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .ambassador-details h2 {
