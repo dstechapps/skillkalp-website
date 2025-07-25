@@ -5,159 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SkillKalp Campus Ambassador Program</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-  <style>
-    * {
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      background-color: #f9fafb;
-      color: #1f2937;
-      line-height: 1.6;
-      padding: 0 1rem;
-    }
-
-    .ambassador-section {
-      padding: 60px 0;
-      background: linear-gradient(to right, #e0f2fe, #ffffff);
-      text-align: center;
-    }
-
-    .ambassador-section h1 {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      color: #1e3a8a;
-    }
-
-    .ambassador-section p {
-      max-width: 700px;
-      margin: 0 auto 2rem;
-      font-size: 1rem;
-      color: #374151;
-    }
-
-    .ambassador-cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-bottom: 3rem;
-    }
-
-    .card {
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      padding: 1.5rem;
-      max-width: 280px;
-      flex: 1 1 260px;
-      transition: transform 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card h3 {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: #3b82f6;
-      margin-top: 0.75rem;
-    }
-
-    .card p {
-      font-size: 0.95rem;
-      color: #4b5563;
-    }
-
-    .section-title {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      text-align: left;
-      color: #1e40af;
-    }
-
-    .text-section {
-      max-width: 800px;
-      margin: 0 auto 2rem;
-      text-align: left;
-    }
-
-    .text-section ul {
-      padding-left: 1.2rem;
-    }
-
-    .text-section li {
-      margin-bottom: 0.5rem;
-    }
-
-    .apply-form {
-      max-width: 800px;
-      margin: 0 auto;
-      background: #ffffff;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-
-    .apply-form h2 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: #1e40af;
-      margin-bottom: 1rem;
-    }
-
-    .form-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
-
-    .form-group input,
-    .form-group textarea {
-      flex: 1 1 250px;
-      padding: 0.75rem;
-      border: 1px solid #d1d5db;
-      border-radius: 6px;
-      font-size: 0.95rem;
-    }
-
-    .form-group textarea {
-      resize: vertical;
-    }
-
-    .submit-btn {
-      background-color: #2563eb;
-      color: #fff;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .submit-btn:hover {
-      background-color: #1d4ed8;
-    }
-
-    @media (max-width: 640px) {
-      .card {
-        max-width: 100%;
-      }
-
-      .form-group {
-        flex-direction: column;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="ambassador.css" />
 </head>
 <body>
 
@@ -184,14 +32,36 @@
     </div>
   </section>
 
-  <div class="text-section">
-    <h2 class="section-title">Responsibilities</h2>
-    <ul>
-      <li>Coordinate and promote SkillKalp events at your campus</li>
-      <li>Build community and engage students online</li>
-      <li>Share feedback to help improve our offerings</li>
-    </ul>
-  </div>
+  <section class="benefits-section">
+    <h2 class="section-title centered">The Benefits of Becoming an Ambassador</h2>
+    <div class="benefit-cards">
+      <div class="benefit-card">
+        <div class="icon">📜</div>
+        <h3>Certificate of Excellence</h3>
+        <p>Receive an official certificate or letter of recommendation.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon">💌</div>
+        <h3>Appreciation Letter</h3>
+        <p>Personalized letter from the SkillKalp leadership.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon">🛠️</div>
+        <h3>Event Experience</h3>
+        <p>Hands-on event planning and team collaboration.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon">🎟️</div>
+        <h3>Exclusive Passes</h3>
+        <p>Get access to SkillKalp meetups, webinars, or offline events.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="icon">💰</div>
+        <h3>Win Rewards</h3>
+        <p>Stand a chance to earn exciting goodies or cash prizes.</p>
+      </div>
+    </div>
+  </section>
 
   <div class="text-section">
     <h2 class="section-title">Eligibility</h2>
@@ -202,24 +72,28 @@
     </ul>
   </div>
 
-  <div class="apply-form">
-    <h2>Apply Now</h2>
-    <form>
+  <section class="apply-section">
+    <h2 class="section-title centered">Apply Now</h2>
+    <form class="apply-form">
       <div class="form-group">
-        <input type="text" placeholder="Full Name" required>
-        <input type="text" placeholder="College Name" required>
+        <input type="text" placeholder="Full Name" required />
+        <input type="text" placeholder="College Name" required />
       </div>
       <div class="form-group">
-        <input type="email" placeholder="Email Address" required>
-        <input type="tel" placeholder="Phone Number" required>
+        <input type="email" placeholder="Email Address" required />
+        <input type="tel" placeholder="Phone Number" required />
       </div>
       <div class="form-group">
-        <input type="text" placeholder="LinkedIn Profile (optional)">
-        <textarea rows="3" placeholder="Why do you want to become an ambassador?" required></textarea>
+        <input type="text" placeholder="LinkedIn Profile (optional)" />
       </div>
-      <button type="submit" class="submit-btn">Submit Application</button>
+      <div class="form-group full">
+        <textarea rows="4" placeholder="Why do you want to become an ambassador?" required></textarea>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="submit-btn">Submit Application</button>
+      </div>
     </form>
-  </div>
+  </section>
 
 </body>
 </html>
