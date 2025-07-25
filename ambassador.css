@@ -1,0 +1,158 @@
+/* Base Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9fafb;
+  color: #333;
+}
+
+/* Section Wrapper */
+section {
+  padding: 60px 20px;
+}
+
+/* Hero Section */
+.ambassador-hero {
+  background: linear-gradient(to right, #4f46e5, #6366f1);
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.ambassador-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.ambassador-hero p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Cards Section */
+.card-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.amb-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  flex: 1 1 280px;
+  max-width: 300px;
+  padding: 24px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.amb-card:hover {
+  transform: translateY(-5px);
+}
+
+.amb-card .emoji {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.amb-card h3 {
+  color: #4f46e5;
+  margin-bottom: 10px;
+}
+
+/* Info Sections */
+.ambassador-info {
+  max-width: 900px;
+  margin: 40px auto;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.ambassador-info h2 {
+  font-size: 1.5rem;
+  color: #4f46e5;
+  margin-top: 40px;
+}
+
+/* Form Styles */
+.ambassador-form {
+  max-width: 600px;
+  margin: 60px auto;
+  background: #fff;
+  padding: 32px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.ambassador-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4f46e5;
+}
+
+.ambassador-form label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.ambassador-form input,
+.ambassador-form textarea,
+.ambassador-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.ambassador-form button {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #4f46e5;
+  color: #fff;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ambassador-form button:hover {
+  background-color: #4338ca;
+}
+
+/* Success Toast */
+.toast-success {
+  display: none;
+  text-align: center;
+  background-color: #d1fae5;
+  color: #065f46;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .amb-card {
+    max-width: 100%;
+  }
+
+  .ambassador-hero h1 {
+    font-size: 2rem;
+  }
+}
