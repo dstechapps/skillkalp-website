@@ -71,17 +71,31 @@ section {
   font-weight: 600;
 }
 
+.ambassador-details {
+  padding: 60px 20px;
+  background-color: #f9fafb;
+}
+
+.ambassador-details .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 .ambassador-details h2 {
-  margin-top: 40px;
+  font-size: 1.75rem;
+  margin-bottom: 16px;
   color: #111827;
 }
 
 .ambassador-details ul {
-  padding-left: 20px;
+  padding-left: 1.5rem;
+  margin-bottom: 40px;
 }
 
 .ambassador-details li {
-  margin: 10px 0;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #374151;
 }
 
 .ambassador-form h2 {
