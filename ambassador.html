@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Campus Ambassador Program | SkillKalp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Campus Ambassador | SkillKalp</title>
+  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="ambassador.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <!-- Hero Section -->
-  <section class="hero">
+
+  <section class="ambassador-hero">
     <div class="container">
-      <h1>Become a SkillKalp Campus Ambassador</h1>
-      <p>Empower your peers. Build your brand. Lead with SkillKalp.</p>
+      <h1>SkillKalp Campus Ambassador Program</h1>
+      <p>Empower peers. Build your brand. Lead with SkillKalp.</p>
     </div>
   </section>
 
-  <!-- Benefits Section -->
-  <section class="benefits">
-    <div class="container cards">
-      <div class="card">
-        <h3>🎓 Represent</h3>
-        <p>Be the face of SkillKalp in your college and raise awareness about our programs.</p>
+  <section class="ambassador-benefits">
+    <div class="container">
+      <div class="benefit-card">
+        <span class="icon">🎓</span>
+        <h3>Represent</h3>
+        <p>Be the face of SkillKalp in your college and lead awareness about our programs.</p>
       </div>
-      <div class="card">
-        <h3>📣 Promote</h3>
+      <div class="benefit-card">
+        <span class="icon">📣</span>
+        <h3>Promote</h3>
         <p>Help promote trainings, workshops, and events digitally and offline.</p>
       </div>
-      <div class="card">
-        <h3>🎁 Perks</h3>
+      <div class="benefit-card">
+        <span class="icon">🎁</span>
+        <h3>Perks</h3>
         <p>Get certificates, exclusive goodies, mentorship, and training discounts.</p>
       </div>
     </div>
   </section>
 
-  <!-- Responsibilities -->
-  <section class="info">
+  <section class="ambassador-details">
     <div class="container">
       <h2>Responsibilities</h2>
       <ul>
@@ -45,45 +47,30 @@
         <li>Build community and engage students online</li>
         <li>Share feedback to help improve our offerings</li>
       </ul>
-    </div>
-  </section>
 
-  <!-- Eligibility -->
-  <section class="info">
-    <div class="container">
       <h2>Eligibility</h2>
       <ul>
-        <li>Must be a currently enrolled student in an engineering college</li>
+        <li>Currently enrolled student in an engineering college</li>
         <li>Strong communication skills and leadership mindset</li>
         <li>Minimum 3-month commitment</li>
       </ul>
     </div>
   </section>
 
-  <!-- Application Form -->
-  <section class="form-section">
+  <section class="ambassador-form">
     <div class="container">
       <h2>Apply Now</h2>
-      <form id="ambassadorForm">
-        <input type="text" name="name" placeholder="Full Name" required />
-        <input type="text" name="college" placeholder="College Name" required />
-        <input type="email" name="email" placeholder="Email Address" required />
-        <input type="tel" name="phone" placeholder="Phone Number" required />
-        <input type="url" name="linkedin" placeholder="LinkedIn Profile (Optional)" />
-        <textarea name="why" placeholder="Why do you want to become an ambassador?" required></textarea>
-        <button type="submit">Submit</button>
-        <p id="form-message"></p>
+      <form>
+        <input type="text" placeholder="Full Name" required />
+        <input type="text" placeholder="College Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <input type="tel" placeholder="Phone Number" required />
+        <input type="url" placeholder="LinkedIn Profile (Optional)" />
+        <textarea placeholder="Why do you want to become an ambassador?" required></textarea>
+        <button type="submit">Submit Application</button>
       </form>
     </div>
   </section>
 
-  <script>
-    document.getElementById("ambassadorForm").addEventListener("submit", function (e) {
-      e.preventDefault();
-      document.getElementById("form-message").textContent = "Thank you for applying! We'll be in touch soon.";
-      document.getElementById("ambassadorForm").reset();
-    });
-  </script>
 </body>
-
 </html>
