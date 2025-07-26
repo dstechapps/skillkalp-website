@@ -160,6 +160,51 @@
   const supabase = supabase.createClient('https://bnfykrqlfvzddueourfb.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJuZnlrcnFsZnZ6ZGR1ZW91cmZiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTMzMzUzNjAsImV4cCI6MjA2ODkxMTM2MH0.76b-N7_gTW0dPuX3lTSMc3aLi5aG15d6rB9zW3G7WOs');
 </script>
 
+  <script>
+  const form = document.querySelector('.apply-form');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Get form values
+    const fullName = form.querySelector('input[placeholder="Full Name"]').value.trim();
+    const collegeName = form.querySelector('input[placeholder="College Name"]').value.trim();
+    const email = form.querySelector('input[placeholder="Email Address"]').value.trim();
+    const phone = form.querySelector('input[placeholder="Phone Number"]').value.trim();
+    const linkedin = form.querySelector('input[placeholder="LinkedIn Profile (optional)"]').value.trim();
+    const motivation = form.querySelector('textarea').value.trim();
+
+    // Basic validation (optional)
+    if (!fullName || !collegeName || !email || !phone || !motivation) {
+      alert('Please fill all required fields.');
+      return;
+    }
+
+    // Insert into Supabase
+    const { data, error } = await supabase
+      .from('ambassador_applications')
+      .insert([
+        {
+          full_name: fullName,
+          college: collegeName,
+          email,
+          phone,
+          linkedin,
+          why_join: motivation
+        }
+      ]);
+
+    if (error) {
+      console.error('Submission error:', error.message);
+      alert('Something went wrong. Please try again later.');
+    } else {
+      alert('Your application has been submitted successfully!');
+      form.reset();
+    }
+  });
+</script>
+
+
 
 </body>
 </html>
