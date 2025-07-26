@@ -133,65 +133,81 @@
   </div>
 
  <section class="apply-section">
+<form id="ambassador-form" class="apply-form">
   <h2 class="section-title centered">Apply Now</h2>
-  <form class="apply-form">
-    <div class="form-group">
-      <input type="text" placeholder="Full Name" required />
-      <input type="text" placeholder="College Name" required />
-    </div>
-    <div class="form-group">
-      <input type="email" placeholder="Email Address" required />
-      <input type="tel" placeholder="Phone Number" required />
-    </div>
-    <div class="form-group">
-      <input type="text" placeholder="LinkedIn Profile (optional)" />
-    </div>
-    <div class="form-group full">
-      <textarea rows="4" placeholder="Why do you want to become an ambassador?" required></textarea>
-    </div>
-    <div class="form-actions">
-      <button type="submit" class="submit-btn">Submit Application</button>
-    </div>
-  </form>
+
+  <div class="form-group">
+    <input type="text" name="name" placeholder="Full Name" required />
+    <input type="text" name="college" placeholder="College Name" required />
+  </div>
+
+  <div class="form-group">
+    <input type="email" name="email" placeholder="Email Address" required />
+    <input type="tel" name="phone" placeholder="Phone Number" required />
+  </div>
+
+  <div class="form-group">
+    <input type="text" name="linkedin" placeholder="LinkedIn Profile (optional)" />
+    <textarea name="reason" rows="3" placeholder="Why do you want to become an ambassador?" required></textarea>
+  </div>
+
+  <button type="submit" class="submit-btn">Submit Application</button>
+</form>
+
 </section>
 
 <!-- Supabase Client -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
 <script>
-  // ✅ Create the Supabase client BEFORE using it
   const supabase = window.supabase.createClient(
     'https://bnfykrqlfvzddueourfb.supabase.co',
     'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJuZnlrcnFsZnZ6ZGR1ZW91cmZiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTMzMzUzNjAsImV4cCI6MjA2ODkxMTM2MH0.76b-N7_gTW0dPuX3lTSMc3aLi5aG15d6rB9zW3G7WOs'
   );
 
-  // ✅ Attach form submit logic AFTER initializing supabase
-  const form = document.querySelector('.apply-form');
+  const form = document.getElementById('ambassador-form');
 
-  form.addEventListener('submit', async (e) => {
+  form.addEventListener('submit', async function (e) {
     e.preventDefault();
 
-    const fullName = form.querySelector('input[placeholder="Full Name"]').value.trim();
-    const college = form.querySelector('input[placeholder="College Name"]').value.trim();
-    const email = form.querySelector('input[placeholder="Email Address"]').value.trim();
-    const phone = form.querySelector('input[placeholder="Phone Number"]').value.trim();
-    const linkedin = form.querySelector('input[placeholder="LinkedIn Profile (optional)"]').value.trim();
-    const reason = form.querySelector('textarea[placeholder*="Why do you want"]').value.trim();
+    const formData = new FormData(form);
+    const dataObj = Object.fromEntries(formData.entries());
 
+    // 1. Insert into Supabase
     const { data, error } = await supabase
       .from('ambassador_applications')
-      .insert([
-        { full_name: fullName, college_name: college, email, phone, linkedin, reason }
-      ]);
+      .insert([{
+        full_name: dataObj.name,
+        college: dataObj.college,
+        email: dataObj.email,
+        phone: dataObj.phone,
+        linkedin: dataObj.linkedin,
+        reason: dataObj.reason
+      }]);
 
     if (error) {
-      alert('There was an error submitting the form. Please try again.');
+      alert("Submission failed. Please try again.");
       console.error(error);
-    } else {
-      alert('Application submitted successfully!');
-      form.reset();
+      return;
     }
+
+    // 2. Send to Formspree
+    fetch('https://formspree.io/f/your_form_id', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json'
+      },
+      body: formData
+    }).then(response => {
+      if (response.ok) {
+        alert('Application submitted successfully!');
+        form.reset();
+      } else {
+        alert('Submitted to database, but email failed.');
+      }
+    });
   });
 </script>
+
 
 
 
